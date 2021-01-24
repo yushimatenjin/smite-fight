@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no' />
+    <meta charset='utf-8'>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <style></style>
+    <title>SMITE PRACTICE TOOL for LoL</title>
+    <script src="playcanvas-stable.min.js"></script>
+    <script src="__settings__.js"></script>
+</head>
+<body>
+    <script src="__start__.js"></script>
+    <script src="__loading__.js"></script>
+        <script>
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("./serviceWorker.js")
+            .then(function(registration) {
+              if (typeof registration.update == "function") {
+                registration.update();
+              }
+            })
+            .catch(function(error) {
+              console.log("Error Log: " + error);
+            });
+        }
+      </script>
+</body>
+</html>
